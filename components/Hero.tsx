@@ -3,7 +3,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+    <section className="relative min-h-[100vh] flex items-center pt-20 overflow-hidden">
       {/* Background with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -17,44 +17,46 @@ const Hero: React.FC = () => {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="max-w-2xl animate-in fade-in slide-in-from-left-8 duration-1000">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-white leading-[1.1] mb-6">
+          <div className="max-w-2xl">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium text-white leading-[1.1] mb-6">
               Powering the Future with Sustainable Solar Solutions
             </h1>
             <p className="text-lg md:text-xl text-blue-50/90 mb-10 leading-relaxed max-w-xl font-light">
               Cutting-edge solar energy technology for a greener tomorrow. Join the revolution in renewable energy with innovative solutions designed for efficiency and sustainability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-white hover:bg-blue-50 text-blue-600 px-8 py-4 rounded-full text-base font-bold transition-all shadow-xl hover:shadow-2xl active:scale-95">
+              <button className="bg-white hover:bg-blue-50 text-black px-8 py-4 rounded-full text-base font-bold transition-all shadow-xl hover:shadow-2xl active:scale-95">
                 Get Free Consultation
               </button>
             </div>
           </div>
 
           {/* Right Floating Card */}
-          <div className="hidden lg:flex justify-end animate-in fade-in slide-in-from-right-8 duration-1000">
-            <div className="relative group w-full max-w-md">
+          <div className="hidden lg:flex flex-col items-end gap-6 animate-in fade-in slide-in-from-right-8 duration-1000 delay-300">
+            <p className="text-blue-50/90 text-sm max-w-xs text-left leading-relaxed font-light">
+              Join the revolution in renewable energy with innovative solutions designed for efficiency and sustainability.
+            </p>
+            <div className="relative group w-80">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-cyan-400 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-              <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl w-full">
-                <img
-                  src="https://picsum.photos/seed/panels/800/600"
-                  alt="Solar Installation"
-                  className="w-full h-56 object-cover"
-                />
-                <div className="p-8">
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-bold text-slate-900 leading-tight">
-                      ADVANCED SOLAR PANEL INSTALLATION
-                    </h3>
-                    <div className="bg-blue-50 p-2 rounded-lg text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors cursor-pointer">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
-                    </div>
+              <div className="relative bg-white rounded-sm overflow-hidden shadow-2xl p-6">
+                <div className="flex justify-between items-start mb-12">
+                  <div className="w-24 h-24 overflow-hidden shadow-sm">
+                    <img
+                      src="https://i.pinimg.com/736x/65/b9/49/65b949a6c2be94b7aa2bc2a2a6288ebd.jpg"
+                      alt="Solar Installation"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <p className="text-slate-500 text-sm">
-                    Join the revolution in renewable energy with innovative solutions designed for efficiency and sustainability.
-                  </p>
+                  <div className="text-slate-900 cursor-pointer hover:text-blue-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 19L19 5M19 5H9M19 5V15" />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-base font-bold text-slate-900 leading-tight uppercase tracking-wide">
+                    ADVANCE SOLAR <br /> PANEL INSTALLATION
+                  </h3>
                 </div>
               </div>
             </div>

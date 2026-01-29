@@ -24,6 +24,8 @@ const NewsSection: React.FC = () => {
             <div
               key={news.id}
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer border border-slate-100"
+              data-aos="fade-up"
+              data-aos-delay={news.id * 100}
             >
               <div className="relative overflow-hidden aspect-[16/10]">
                 <img

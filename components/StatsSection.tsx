@@ -19,7 +19,12 @@ const StatsSection: React.FC = () => {
           {/* Stats Flex */}
           <div className="flex-1 flex flex-col sm:flex-row justify-between items-center gap-8 lg:gap-16 w-full">
             {STATS.map((stat, index) => (
-              <div key={index} className="flex items-center gap-4">
+              <div
+                key={index}
+                className="flex items-center gap-4"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 <span className="text-5xl md:text-6xl font-medium text-slate-900 tracking-tight">
                   {stat.value}
                 </span>

@@ -9,10 +9,20 @@ import TestimonialSection from './components/TestimonialSection';
 import NewsSection from './components/NewsSection';
 import Footer from './components/Footer';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100,
+      easing: 'ease-out-cubic',
+    });
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };

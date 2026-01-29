@@ -16,3 +16,11 @@ export interface NewsCard {
   description: string;
   link: string;
 }
+export interface Testimonial {
+  id: number;
+  quote: string;
+  author: string;
+  role: string;
+  avatar: string;
+  image: string;
+}

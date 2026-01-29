@@ -7,17 +7,17 @@ const AboutSection: React.FC = () => {
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: Image */}
-          <div className="relative group">
+          <div className="relative group" data-aos="fade-right">
             <div className="absolute -inset-4 bg-blue-100 rounded-3xl opacity-30 blur-xl"></div>
             <img
-              src="https://picsum.photos/seed/worker/1000/800"
+              src="https://i.pinimg.com/1200x/e4/4d/a5/e44da5f0251f003cb6e5a3054b24e670.jpg"
               alt="Solar Technicians"
               className="relative w-full rounded-2xl shadow-xl z-10"
             />
           </div>
 
           {/* Right: Content */}
-          <div className="flex flex-col">
+          <div className="flex flex-col" data-aos="fade-left">
             <h2 className="text-4xl md:text-5xl font-medium text-slate-900 mb-8 leading-[1.1] tracking-tight">
               Leading the way in
               <br className="hidden lg:block" />

@@ -61,7 +61,8 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-slate-600"
+            className={`md:hidden p-2 rounded-lg transition-colors ${scrolled || mobileMenuOpen ? 'text-slate-900 bg-slate-100' : 'text-white bg-white/10 backdrop-blur-md'
+              }`}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
@@ -78,18 +79,18 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-4 duration-300">
+          <div className="md:hidden absolute top-20 left-0 right-0 bg-white shadow-xl border-t border-slate-100 p-6 flex flex-col gap-4 animate-in fade-in slide-in-from-top-4 duration-300">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-lg font-medium text-slate-700 px-4 py-2 hover:bg-slate-50 rounded-lg"
+                className="text-lg font-medium text-slate-700 px-4 py-3 hover:bg-slate-50 rounded-lg border border-transparent hover:border-slate-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
               </a>
             ))}
-            <button className="mt-4 mx-4 bg-blue-600 text-white px-6 py-3 rounded-full text-base font-semibold">
+            <button className="mt-2 w-full bg-blue-600 text-white px-6 py-4 rounded-xl text-lg font-bold shadow-lg shadow-blue-500/20 active:scale-95">
               Contact Us
             </button>
           </div>
