@@ -5,7 +5,7 @@ import { LATEST_NEWS } from '../constants';
 const NewsSection: React.FC = () => {
   return (
     <section id="news" className="py-20 md:py-32 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-end mb-12">
           <div>
             <span className="text-xs font-bold tracking-widest text-blue-600 uppercase mb-4 block">Our Blog</span>
@@ -21,14 +21,14 @@ const NewsSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {LATEST_NEWS.map((news) => (
-            <div 
-              key={news.id} 
+            <div
+              key={news.id}
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all group cursor-pointer border border-slate-100"
             >
               <div className="relative overflow-hidden aspect-[16/10]">
-                <img 
-                  src={news.image} 
-                  alt={news.title} 
+                <img
+                  src={news.image}
+                  alt={news.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -39,8 +39,8 @@ const NewsSection: React.FC = () => {
                 <p className="text-slate-500 text-sm md:text-base leading-relaxed mb-6 line-clamp-3">
                   {news.description}
                 </p>
-                <a 
-                  href={news.link} 
+                <a
+                  href={news.link}
                   className="inline-flex items-center gap-2 text-sm font-bold text-blue-600 uppercase tracking-wider hover:gap-3 transition-all"
                 >
                   Read More

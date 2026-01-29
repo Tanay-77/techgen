@@ -4,7 +4,7 @@ import React from 'react';
 const TestimonialSection: React.FC = () => {
   return (
     <section className="py-20 md:py-32 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: Video Thumbnail */}
           <div className="relative group cursor-pointer">

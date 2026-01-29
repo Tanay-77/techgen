@@ -4,7 +4,7 @@ import React from 'react';
 const MaintenanceSection: React.FC = () => {
   return (
     <section className="py-20 md:py-32 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: Content */}
           <div className="order-2 lg:order-1 flex flex-col">
@@ -44,9 +44,9 @@ const MaintenanceSection: React.FC = () => {
           {/* Right: Image */}
           <div className="order-1 lg:order-2 relative group">
             <div className="absolute -inset-4 bg-blue-200 rounded-3xl opacity-20 blur-2xl group-hover:opacity-30 transition-opacity"></div>
-            <img 
-              src="https://picsum.photos/seed/windsolar/1000/800" 
-              alt="Wind Turbine and Solar" 
+            <img
+              src="https://picsum.photos/seed/windsolar/1000/800"
+              alt="Wind Turbine and Solar"
               className="relative w-full rounded-2xl shadow-2xl z-10"
             />
           </div>
