@@ -40,6 +40,9 @@ export const STATS: StatItem[] = [
   { value: '80%', label: 'Reduction in Energy Costs' },
   { value: '25+', label: 'Years Average Lifespan' },
   { value: '75%', label: 'Faster Return on Investment' },
+  { value: '10k+', label: 'Homes Powered' },
+  { value: '500MW', label: 'Total Capacity Installed' },
+  { value: '100%', label: 'Clean Energy Commitment' },
 ];
 
 export const LATEST_NEWS: NewsCard[] = [

@@ -5,30 +5,50 @@ import { STATS } from '../constants';
 const StatsSection: React.FC = () => {
   return (
     <section className="bg-white py-16 md:py-24 border-b border-slate-100">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-          {/* Label Column */}
-          <div className="lg:w-1/4">
-            <span className="text-xs font-bold tracking-widest text-slate-500 uppercase mb-2 block">
-              ADVANCED
-              <br />
-              INNOVATIONS
-            </span>
-          </div>
-
-          {/* Stats Flex */}
-          <div className="flex-1 flex flex-col sm:flex-row justify-between items-center gap-8 lg:gap-16 w-full">
+      <div className="w-full overflow-hidden">
+        <div className="flex animate-marquee w-max select-none hover:[animation-play-state:paused]">
+          {/* First Set */}
+          <div className="flex items-center gap-16 px-8">
+            <div className="shrink-0 mr-8">
+              <span className="text-xs font-bold tracking-widest text-slate-500 uppercase block">
+                ADVANCED
+                <br />
+                INNOVATIONS
+              </span>
+            </div>
             {STATS.map((stat, index) => (
               <div
-                key={index}
+                key={`stat-1-${index}`}
                 className="flex items-center gap-4"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
               >
-                <span className="text-5xl md:text-6xl font-medium text-slate-900 tracking-tight">
+                <span className="text-5xl md:text-6xl font-medium text-slate-900 tracking-tight whitespace-nowrap">
                   {stat.value}
                 </span>
-                <span className="text-sm text-slate-500 font-medium leading-tight max-w-[100px]">
+                <span className="text-sm text-slate-500 font-medium leading-tight max-w-[100px] whitespace-normal">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          {/* Second Set (Duplicate for seamless loop) */}
+          <div className="flex items-center gap-16 px-8">
+            <div className="shrink-0 mr-8">
+              <span className="text-xs font-bold tracking-widest text-slate-500 uppercase block">
+                ADVANCED
+                <br />
+                INNOVATIONS
+              </span>
+            </div>
+            {STATS.map((stat, index) => (
+              <div
+                key={`stat-2-${index}`}
+                className="flex items-center gap-4"
+              >
+                <span className="text-5xl md:text-6xl font-medium text-slate-900 tracking-tight whitespace-nowrap">
+                  {stat.value}
+                </span>
+                <span className="text-sm text-slate-500 font-medium leading-tight max-w-[100px] whitespace-normal">
                   {stat.label}
                 </span>
               </div>
